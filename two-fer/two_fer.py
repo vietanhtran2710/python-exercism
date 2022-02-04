@@ -2,10 +2,10 @@
     Two-fer exercise
 """
 
-def two_fer(*args):
+def two_fer(name="you"):
     """
         Given a name, return a string with the message:
 
         One for name, one for me.
     """
-    return "One for {}, one for me.".format("you" if len(args) == 0 else args[0])
+    return "One for {}, one for me.".format(name)

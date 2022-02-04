@@ -63,7 +63,9 @@ def categorize_dish(dish_name, dish_ingredients):
         return dish_name + ": PALEO"
     if set(dish_ingredients).issubset(KETO):
         return dish_name + ": KETO"
-    return dish_name + ": OMNIVORE"
+    if set(dish_ingredients).issubset(OMNIVORE):
+        return dish_name + ": OMNIVORE"
+    return None
 
 
 def tag_special_ingredients(dish):
